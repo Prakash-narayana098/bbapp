@@ -1,6 +1,6 @@
-import PocketBase from "pocketbase";
+import PocketBase from 'pocketbase';
 
-export const pb = new PocketBase("http://127.0.0.1:8090");
-
+const pb = new PocketBase(import.meta.env.VITE_PB_URL);
+export default pb;
 // optional: disable auto cancellation for React strict mode
 pb.autoCancellation(false);
