@@ -10,7 +10,6 @@ function Menu() {
     const loadMenu = async () => {
       try {
         const data = await pb.collection("food_item").getFullList({
-          filter: "available = true",
           expand: "categoryId",
           sort: "-created",
         });
